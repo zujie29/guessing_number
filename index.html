@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Number (4 chiffres)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔢 Devine le Code Secret ! 🔢</h1>
+
+        <!-- Section Explication -->
+        <div id="howToPlay">
+            <h2>📖 Comment jouer ?</h2>
+            <p>Un code secret de <b>4 chiffres</b> est généré aléatoirement.</p>
+            <p>Entre un nombre et découvre :</p>
+            <ul>
+                <li>✅ <b>Chiffres bien placés</b></li>
+                <li>🔄 <b>Chiffres corrects mais mal placés</b></li>
+            </ul>
+            <button id="startButton">🚀 Commencer</button>
+        </div>
+
+        <!-- Section du jeu (cachée au début) -->
+        <div id="gameSection" class="hidden">
+            <p>Entre un nombre à 4 chiffres :</p>
+            <input type="text" id="guessInput" maxlength="4" readonly>
+            
+            <!-- Clavier virtuel -->
+            <div class="keyboard">
+                <button class="key" data-value="1">1</button>
+                <button class="key" data-value="2">2</button>
+                <button class="key" data-value="3">3</button>
+                <button class="key" data-value="4">4</button>
+                <button class="key" data-value="5">5</button>
+                <button class="key" data-value="6">6</button>
+                <button class="key" data-value="7">7</button>
+                <button class="key" data-value="8">8</button>
+                <button class="key" data-value="9">9</button>
+                <button class="key delete" data-value="⌫">⌫</button>
+                <button class="key" data-value="0">0</button>
+                <button class="key enter" id="validateButton">Entrer</button>
+            </div>
+
+            <div class="results" id="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
